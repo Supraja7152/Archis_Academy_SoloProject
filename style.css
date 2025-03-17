@@ -1,0 +1,194 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Define CSS Variables for Color Palette */
+:root {
+    --primary-color: #00bfae; /* Teal */
+    --secondary-color: #6c757d; /* Grey */
+    --accent-color: #ff6347; /* Tomato */
+    --background-color: #f4f4f4; /* Light grey */
+    --text-color: #333333; /* Dark text color */
+    --light-bg-color: #ffffff; /* White background for sections */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif; /* Primary font */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #ff6347, #00bfae); /* Gradient background */
+    display: flex;
+    flex-direction: column; /* Stacking content vertically */
+    justify-content: space-between; /* Space out the content */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Global Wrapper */
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: var(--light-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    margin-bottom: 20px; /* Space between bottom and footer */
+}
+
+/* Header Styling */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    width: 100%;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Navigation Styling */
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-3px); /* Hover effect */
+}
+
+/* Main Content Styling */
+main {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--light-bg-color);
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    width: 100%;
+}
+
+main h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+main p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+/* Footer Styling */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 -2px 4px var(--shadow-color);
+    width: 100%;
+}
+
+/* Link Styling */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Stack the navigation links vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    main h2 {
+        font-size: 2.5rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+}
