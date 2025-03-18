@@ -5,31 +5,29 @@
     box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 
-/* Define CSS Variables for Color Palette */
+/* Define CSS Variables for Two-Tone Theme */
 :root {
-    --primary-color: #00bfae; /* Teal */
-    --secondary-color: #6c757d; /* Grey */
-    --accent-color: #ff6347; /* Tomato */
-    --background-color: #f4f4f4; /* Light grey */
-    --text-color: #333333; /* Dark text color */
-    --light-bg-color: #ffffff; /* White background for sections */
+    --primary-color: #27b467; /* Dark Blue */
+    --secondary-color: #facc15; /* Yellow */
+    --background-color: #f1f5f9; /* Light Gray */
+    --text-color: #1e293b; /* Dark Gray */
+    --light-bg-color: #ffffff; /* White */
     --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 /* Body Styling */
 body {
-    font-family: 'Arial', sans-serif; /* Primary font */
+    font-family: 'Arial', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    height: 100vh; /* Full viewport height */
-    background: linear-gradient(135deg, #ff6347, #00bfae); /* Gradient background */
+    height: 100vh;
     display: flex;
-    flex-direction: column; /* Stacking content vertically */
-    justify-content: space-between; /* Space out the content */
-    align-items: center; /* Center content horizontally */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Global Wrapper */
@@ -40,7 +38,7 @@ body {
     background-color: var(--light-bg-color);
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--shadow-color);
-    margin-bottom: 20px; /* Space between bottom and footer */
+    margin-bottom: 20px;
 }
 
 /* Header Styling */
@@ -96,9 +94,72 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: var(--primary-color);
     color: white;
-    transform: translateY(-3px); /* Hover effect */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-container {
+    max-width: 600px;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.primary:hover {
+    background-color: var(--light-bg-color);
+}
+
+.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.secondary:hover {
+    background-color: white;
+    color: var(--primary-color);
 }
 
 /* Main Content Styling */
@@ -129,7 +190,7 @@ main p {
 
 /* Footer Styling */
 footer {
-    background-color: black;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 20px;
@@ -139,20 +200,8 @@ footer {
     width: 100%;
 }
 
-/* Link Styling */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--accent-color);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Stack the navigation links vertically */
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -162,11 +211,7 @@ a:hover {
         margin-bottom: 15px;
     }
 
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    main h2 {
+    header h1, main h2 {
         font-size: 2.5rem;
     }
 
@@ -180,11 +225,7 @@ a:hover {
         padding: 10px;
     }
 
-    header h1 {
-        font-size: 2rem;
-    }
-
-    main h2 {
+    header h1, main h2 {
         font-size: 2rem;
     }
 
