@@ -9,7 +9,7 @@ body {
 
 /* Testimonials Section */
 #testimonials {
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
     padding: 50px 20px;
     text-align: left;
@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 h2 {
@@ -41,7 +42,7 @@ h2 {
     display: flex;
     scroll-behavior: smooth;
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -56,16 +57,17 @@ h2 {
     width: 300%;
 }
 
-/* Testimonial Slide (Each contains two cards side by side) */
+/* Testimonial Slide - Displays Two Cards Side by Side */
 .testimonial-slide {
     display: flex;
     flex: 0 0 100%;
     scroll-snap-align: center;
     justify-content: space-between;
     gap: 20px;
+    padding: 10px;
 }
 
-/* Individual Testimonials */
+/* Individual Testimonial */
 .testimonial {
     flex: 1;
     background: white;
@@ -73,6 +75,9 @@ h2 {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    min-width: 45%; /* Ensures both testimonials fit on the same row */
+    max-width: 48%;
+    box-sizing: border-box;
     width: 100px;
 }
 
@@ -128,10 +133,48 @@ blockquote {
     background-color: #1d3b53;
 }
 
-/* Responsive */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .testimonial-slide {
+        gap: 10px; /* Reduce spacing for smaller tablets */
+    }
+
+    .testimonial {
+        min-width: 48%;
+        max-width: 48%;
+    }
+}
+
 @media (max-width: 768px) {
     .testimonial-slide {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    .testimonial {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .carousel {
+        padding: 10px;
+    }
+
+    .testimonials-header {
+        flex-direction: column;
+        text-align: center;
     }
 }
