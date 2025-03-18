@@ -7,19 +7,24 @@
 
 body {
     background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    min-height: 100vh;
     padding: 20px;
 }
 
 /* Video Section */
 #video-section {
-    max-width: 800px;
+    max-width: 90%;
     margin: auto;
     text-align: center;
 }
 
 #video-section h2 {
-    font-size: 24px;
+    font-size: 2rem;
     color: #1d3b53;
     margin-bottom: 15px;
 }
@@ -27,15 +32,22 @@ body {
 /* Video Thumbnail */
 .video-container {
     position: relative;
-    display: inline-block;
     width: 100%;
     max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .video-container img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-container:hover img {
+    transform: scale(1.05);
 }
 
 /* Play Icon */
@@ -44,7 +56,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-size: 3rem;
     color: white;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
@@ -53,19 +65,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
 
 .video-container:hover .play-icon {
     background: rgba(0, 0, 0, 0.8);
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
+/* Responsive Design */
+@media (max-width: 768px) {
+    #video-section h2 {
+        font-size: 1.5rem;
+    }
+
     .play-icon {
-        font-size: 40px;
+        font-size: 2rem;
         width: 60px;
         height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    #video-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .play-icon {
+        font-size: 1.8rem;
+        width: 50px;
+        height: 50px;
     }
 }
