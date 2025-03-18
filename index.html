@@ -1,27 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet Our Founder</title>
+    <title>CSS Testimonials Carousel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <section id="meet-founder">
-        <div class="founder-content">
-            <h2>Meet Our Founder</h2>
-            <blockquote>
-                “I think you're better off finding the money <br> to hire someone than actually find a co-founder.<br> The main reason? You probably won't find someone <br> as passionate as you are about the organization <br> you're building..."
-            </blockquote>
-            <p><strong>Jason Hound</strong><br>Founder of Trustco.</p>
-            <a href="#" class="cta-button">See Team Behind Our Success →</a>
+    <section id="testimonials">
+        <div class="testimonials-header">
+            <h2>We Believe people we trust</h2>
+            <a href="#" class="see-all">See All →</a>
         </div>
 
-        <div class="founder-image">
-            <img src="https://th.bing.com/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH?rs=1&pid=ImgDetMain" alt="Jason Hound - Founder" class="main-img">
-            <img src="https://th.bing.com/th/id/OIP.iAyC4JlYU0HHdY5DZOgLEAHaE8?rs=1&pid=ImgDetMain" alt="Team Member" class="overlay-img">
-            <div class="icon-badge">🏆</div>
+        <!-- Carousel Wrapper -->
+        <div class="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide" id="slide1">
+                    <div class="testimonial">
+                        <blockquote>
+                            <span class="quote-mark">“</span>
+                            I'm totally unconvinced that two people can find a person they haven't known previously, and become an effective co-founder.
+                        </blockquote>
+                        <div class="author">
+                            <img src="https://th.bing.com/th/id/OIP.x7f3_2qhO3YD3_VuAkJUWQHaMd?w=600&h=1010&rs=1&pid=ImgDetMain" alt="Andrew Wilkins">
+                            <div>
+                                <h4>Andrew Wilkins</h4>
+                                <p>Managing Director, Yess Company</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <span class="quote-mark">“</span>
+                            Easy to use, reasonably priced, and ensures I don’t drop the ball on following up with my leads!
+                        </blockquote>
+                        <div class="author">
+                            <img src="https://th.bing.com/th/id/OIP.lfq10Y4d1zOMcd_dvEw80AHaGR?rs=1&pid=ImgDetMain" alt="Daisy Phelps">
+                            <div>
+                                <h4>Daisy Phelps</h4>
+                                <p>Digital Marketing Director, Monatc</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="testimonial-slide" id="slide2">
+                    <div class="testimonial">
+                        <blockquote>
+                            <span class="quote-mark">“</span>
+                            This platform helped me find the perfect business partner. Highly recommended!
+                        </blockquote>
+                        <div class="author">
+                            <img src="https://images.unsplash.com/photo-1592009309602-1dde752490ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="John Doe">
+                            <div>
+                                <h4>John Doe</h4>
+                                <p>Entrepreneur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <span class="quote-mark">“</span>
+                            The service was outstanding, and I will continue using it for my business needs.
+                        </blockquote>
+                        <div class="author">
+                            <img src="https://thumbs.dreamstime.com/b/sometimes-i-surprise-myself-great-ideas-attractive-young-woman-making-notes-her-desk-office-sometimes-i-surprise-271280912.jpg" alt="Emma Brown">
+                            <div>
+                                <h4>Emma Brown</h4>
+                                <p>Startup Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="testimonial-slide" id="slide3">
+                    <div class="testimonial">
+                        <blockquote>
+                            <span class="quote-mark">“</span>
+                            I appreciate the efficiency and effectiveness of this platform. It's been a game-changer!
+                        </blockquote>
+                        <div class="author">
+                            <img src="https://th.bing.com/th/id/OIP.71bW29zWpo3WwQXvfsYs5wHaJ9?w=2999&h=4031&rs=1&pid=ImgDetMain" alt="Michael Smith">
+                            <div>
+                                <h4>Michael Smith</h4>
+                                <p>Business Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <span class="quote-mark">“</span>
+                            Absolutely love the experience. It's been very smooth and useful for networking.
+                        </blockquote>
+                        <div class="author">
+                            <img src="https://img.freepik.com/free-photo/smiling-woman-with-book_23-2147767502.jpg" alt="Sophia Lee">
+                            <div>
+                                <h4>Sophia Lee</h4>
+                                <p>Marketing Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dots for Navigation -->
+        <div class="dots">
+            <a href="#slide1" class="dot"></a>
+            <a href="#slide2" class="dot"></a>
+            <a href="#slide3" class="dot"></a>
         </div>
     </section>
 
