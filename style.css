@@ -23,12 +23,17 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 20px;
 }
 
 .number-item {
     font-size: 24px;
     font-weight: bold;
     color: #1d3b53;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .number-item span {
@@ -39,8 +44,23 @@ body {
     margin-top: 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .numbers-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .numbers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .number-item {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .number-item span {
+        font-size: 12px;
     }
 }
