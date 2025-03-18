@@ -8,95 +8,55 @@
 
 body {
     background-color: #f8f9fa;
-}
-
-/* Navbar */
-.navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px 10%;
-    background: white;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: #1d3557;
-}
-
-.logo img {
-    height: 30px;
-    margin-right: 10px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #1e4d7e;
-}
-
-.auth-buttons {
-    display: flex;
-    align-items: center;
-}
-
-.login-btn {
-    background: transparent;
-    border: 2px solid #333;
-    padding: 8px 20px;
-    margin-right: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    border-radius: 50px;
-}
-
-.signup-btn {
-    background: #1e4d7e;
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    border-radius: 50px;
-}
-
-.signup-btn:hover {
-    background: #0056b3;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Hero Section */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 80px 10%;
+    width: 100%;
+    max-width: 600px;
+    padding: 50px 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Responsive for large screens (Laptop) */
+@media screen and (min-width: 1024px) {
+    .hero {
+        max-width: 50%;
+        padding: 60px 40px;
+    }
+}
+
+/* Responsive for mobile (Merge content closely) */
+@media screen and (max-width: 480px) {
+    .hero {
+        max-width: 95%;
+        padding: 30px 15px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Hero Content */
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #1d3557;
 }
@@ -106,28 +66,28 @@ body {
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #6c757d;
     margin: 15px 0 20px;
 }
 
+/* Call to Action Buttons */
 .cta {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .primary-btn {
     background: #1e4d7e;
     color: white;
-    padding: 12px 20px;
+    padding: 14px 22px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
     font-weight: bold;
-    transition: 0.3s;
     border-radius: 50px;
+    width: 80%;
 }
 
 .primary-btn:hover {
@@ -136,39 +96,45 @@ body {
 
 .video-btn {
     background: transparent;
-    color: #333;
-    padding: 12px 20px;
-    border: 2px solid #333;
+    color: #1e4d7e;
+    padding: 12px 22px;
+    border: none;
     cursor: pointer;
-    border-radius: 5px;
     font-weight: bold;
-    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.video-btn:hover {
-    background: #333;
-    color: white;
+.video-btn .play-icon {
+    font-size: 1rem;
+    margin-right: 5px;
 }
 
 /* Social Media Icons */
 .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Floating Avatars */
+.floating-avatars {
     position: absolute;
-    left: 50px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    top: 30%;
-    transform: translateY(-50%);
+    gap: 15px;
 }
 
-.social-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
-.social-item img {
+.avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -176,56 +142,42 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Mobile-Specific Styling */
+@media screen and (max-width: 480px) {
     .hero {
-        padding: 50px 5%;
+        width: 100%;
+        border-radius: 0;
+        padding: 20px;
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
-    .social-media {
-        left: 20px;
+    .hero-content p {
+        font-size: 1rem;
     }
-}
 
+    .primary-btn {
+        width: 100%;
+        font-size: 14px;
+    }
 
+    .floating-avatars {
+        position: relative;
+        bottom: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
 
-/* Basic Styles */
-body {
-    background-color: #f9f9f9;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
 
-/* Container for Images */
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-/* Randomly Placed Images */
-.social-image, .avatar-image {
-    position: absolute;
-    width: 60px;  /* Adjust size */
-    height: auto;
-}
-
-/* Positioning images in random spots */
-.social-image:nth-child(1) { top: 10%; left: 5%; }
-.social-image:nth-child(2) { top: 30%; right: 10%; }
-.social-image:nth-child(3) { bottom: 20%; left: 15%; }
-.social-image:nth-child(4) { bottom: 5%; right: 5%; }
-
-.avatar-image:nth-child(5) { top: 50%; right: 40%; margin-top: 50px; margin-right: 500px; border-radius: 50px;}
-.avatar-image:nth-child(6) { bottom: 40%; right: 30%; border-radius: 50px; }
-.avatar-image:nth-child(7) { top: 15%; right: 20%; border-radius: 50px;}
-
-#img-greenStar{
-    width: 20px;
-    height: 20px;
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
 }
