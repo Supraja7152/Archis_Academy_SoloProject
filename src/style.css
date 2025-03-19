@@ -1,4 +1,4 @@
-/* General Styles to Prevent Scroll */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +6,18 @@
 }
 
 body {
-    overflow-x: hidden;
     font-family: Arial, sans-serif;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 /* Footer Styles */
 .footer {
     background-color: #f8f9fa;
     color: #333;
-    padding: 40px 10%;
-    border-top: 2px solid #ddd;
+    padding: 40px 5%;
     width: 100%;
+    border-top: 2px solid #ddd;
 }
 
 /* Flexbox Layout */
@@ -52,8 +52,8 @@ body {
 }
 
 .social-icons a img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
     border-radius: 50px;
@@ -70,6 +70,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     text-align: left;
+    margin: 10px 0;
 }
 
 /* Right Section: Navigation Links */
@@ -111,7 +112,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -124,12 +125,45 @@ body {
 
     .footer-description {
         max-width: 100%;
-        margin: 20px 0;
+        text-align: left;
     }
 
     .footer-links {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 576px) {
+    .footer {
+        padding: 30px 3%;
+    }
+
+    .footer-logo {
+        font-size: 20px;
+    }
+
+    .footer-description {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .social-icons a img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+
+    .footer-column ul li a {
+        font-size: 13px;
     }
 }
