@@ -42,10 +42,14 @@ const BlogCard = ({ blog }) => {
     <div className="blog-card">
       <img src={blog.image} alt={blog.title} className="blog-image" />
       <div className="blog-content">
-        <p className="blog-date">{blog.date}, by {blog.author}</p>
+        <p className="blog-date">
+          <strong>{blog.date}</strong>, by {blog.author}
+        </p>
         <h3 className="blog-title">{blog.title}</h3>
         <p className="blog-excerpt">{blog.excerpt}</p>
-        <a href={blog.link} className="blog-link">Read Story →</a>
+        <a href={blog.link} className="blog-link">
+          Read Story →
+        </a>
       </div>
     </div>
   );
@@ -56,7 +60,7 @@ const BlogsSection = () => {
     <section id="blogs" className="blogs-section">
       <div className="container">
         <h2 className="section-title">
-          What's new on <span className="highlight">Trustco.</span> ?
+          What's new on <span className="highlight">Trustco.</span>?
         </h2>
         <div className="blogs-grid">
           {blogs.map((blog) => (
@@ -64,7 +68,9 @@ const BlogsSection = () => {
           ))}
         </div>
         <div className="see-all">
-          <a href="#" className="see-all-link">See All →</a>
+          <a href="#" className="see-all-link">
+            See All →
+          </a>
         </div>
       </div>
     </section>
