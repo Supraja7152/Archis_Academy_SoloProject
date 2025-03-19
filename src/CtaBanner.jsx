@@ -1,13 +1,13 @@
 import React from "react";
 import "./CtaBanner.css";
-// import ctaImage from "./cta-image.png"; // Replace with actual image path
+
 
 const CtaBanner = () => {
   return (
     <section className="cta-banner">
       <div className="cta-content">
         <h2 className="cta-heading">
-          Take Your Customer <br /> Service To The <br /> Next Level
+          Take your customer <br /> service to the next <br /> level
         </h2>
         <a href="#" className="cta-button">
           Get 14 Days Free Trial →

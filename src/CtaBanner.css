@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #111827; /* Dark background */
+    background-color: #111827; /* Dark theme */
     color: white;
     padding: 60px 10%;
     border-radius: 10px;
@@ -10,6 +10,7 @@
     position: relative;
   }
   
+  /* ==== Content Section ==== */
   .cta-content {
     max-width: 50%;
   }
@@ -43,6 +44,7 @@
     opacity: 0.8;
   }
   
+  /* ==== Image & Floating Icons ==== */
   .cta-image-container {
     position: relative;
   }
@@ -91,7 +93,7 @@
   }
   
   /* ===== RESPONSIVE DESIGN ===== */
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     .cta-banner {
       flex-direction: column;
       text-align: center;
