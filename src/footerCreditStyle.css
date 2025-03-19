@@ -34,6 +34,7 @@ body {
 .copyright {
     flex: 1;
     text-align: left;
+    white-space: nowrap;
 }
 
 /* Legal Links */
@@ -48,6 +49,7 @@ body {
     margin: 0 10px;
     font-size: 14px;
     transition: color 0.3s ease;
+    display: inline-block;
 }
 
 .legal-links a:hover {
@@ -77,8 +79,10 @@ body {
     outline: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive Design: Mobile-First Approach */
+
+/* 📱 Small Screens (Max-width: 575px) */
+@media (max-width: 575px) {
     .credits-container {
         flex-direction: column;
         text-align: center;
@@ -88,10 +92,46 @@ body {
     .legal-links,
     .language-selector {
         text-align: center;
+        flex: unset;
+        width: 100%;
         margin: 5px 0;
     }
 
     .language-selector {
         justify-content: center;
+    }
+}
+
+/* 📟 Tablets (Min-width: 576px and Max-width: 991px) */
+@media (min-width: 576px) and (max-width: 991px) {
+    .credits-container {
+        flex-wrap: wrap;
+    }
+
+    .copyright,
+    .legal-links,
+    .language-selector {
+        flex: 1 1 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+/* 🖥 Larger Screens (Min-width: 992px) */
+@media (min-width: 992px) {
+    .credits-container {
+        flex-direction: row;
+    }
+
+    .copyright {
+        text-align: left;
+    }
+
+    .legal-links {
+        text-align: center;
+    }
+
+    .language-selector {
+        text-align: right;
     }
 }
