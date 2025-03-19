@@ -1,11 +1,11 @@
-import BlogsSection from "./BlogsSection"
+import CtaBanner from "./CtaBanner";
 
 
 
 const App = () => {
   return(
     <div>
-      <BlogsSection/>
+      <CtaBanner/>
     </div>
   )
 }
